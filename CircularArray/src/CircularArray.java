@@ -33,7 +33,10 @@ public class CircularArray<T> implements Iterable<T> {
 
 	public void rotate(int i) {
 		head += i;
-		head = Math.abs(head%size);
+		head %= size;
+		if (head<0) {
+			head = size+head;
+		}
 		cursor = 0;
 	}
 	
