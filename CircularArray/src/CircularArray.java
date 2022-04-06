@@ -50,7 +50,7 @@ public class CircularArray<T> implements Iterable<T> {
 			@Override
 			public boolean hasNext() {
 				if (cursor!=0 && (cursor+head)%size==head) {
-					cursor = head;
+					cursor = 0;
 					return false;
 				}
 				return true;
